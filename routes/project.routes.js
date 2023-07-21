@@ -7,6 +7,7 @@ const Task = require("../models/Task.model");
  
 //  POST /api/projects  -  Creates a new project
 router.post("/projects", (req, res, next) => {
+  console.log({body: req.body});
   const { title, description } = req.body;
  
   Project.create({ title, description, tasks: [] })
